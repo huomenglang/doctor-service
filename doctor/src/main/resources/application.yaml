@@ -1,0 +1,28 @@
+server:
+  port: 8082
+spring:
+  profiles:
+    active: prod
+  config:
+    import: configserver:http://configserver:8088
+    enabled: false
+#  application:
+#    name: doctor_service
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5454/hospital_management
+#    #url: jdbc:postgresql://postgres:5432/ac_service # account_db  get from NAMES of postgres build container using network
+#    username: postgres
+#    password: lang@123
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        jdbc:
+#          lob:
+#            non_contextual_creation: true
+#        enable_lazy_load_no_trans: true
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#    open-in-view: false
+#    show-sql: true
